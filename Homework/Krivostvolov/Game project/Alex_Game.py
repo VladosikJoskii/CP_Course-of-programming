@@ -7,7 +7,7 @@ if start == 1:
     pl_hp = 100
     pl_dmg = 30
     print(f"\nВаша характеристика:\nHp:{pl_hp} Dammage:{pl_dmg} Lvl.{pl_lvl}")
-    print('\nПервый монстр которого Вы встретили был великий и ужасныый Римуру Темпест, он обладал сильнейшей магией и мог с лёгкстю переломать Вам кости')
+    print('\nПервый монстр которого Вы встретили был великий и ужасныый Римуру Темпест, он обладал сильнейшей магией и мог с лёгкостью переломать Вам кости')
     print ('\nИнформация:\nСила врага - невообразима\nПри победе ваш уровень повыситься на максимальный\nНо если это обычная слизь, то ёё атака: 10, здоровье: 30\nВаши навыки повысятся на 1 Lvl.')
     challenge_1 = int(input('\nВаши действия:\n1 Напасть\n2 Убежать\nВвод:'))
     enemy_dmg = 10
@@ -17,7 +17,7 @@ if start == 1:
         pl_dmg += 10
         print ('\nВы победили !')
         print(f"\nВаша характеристика:\nHp:{pl_hp} Dammage:{pl_dmg} Lvl.{pl_lvl}")
-        print('\nХмммммм.... похоже это быда обыкновенная слизь')
+        print('\nХмммммм.... похоже это была обыкновенная слизь')
     else:
         print('\nВы в ужасе убежали от этой слизи')
     print('\nПосле событий с первым монстром Вы продолжили свои похождения. Идя по протоптоной тропе Вы увидили высокое дерево в дупле которого, совершенно случайно, оказались две большие спящии летучие мыши, которые по ночам терроризировали жителей из Вашего города.')
@@ -44,6 +44,7 @@ if start == 1:
         print('\nПройдя несколько километров Вы наткнулись на кабана. Но Вам что-то в нём не понравилось, он выглядел более опасным чем другие представители его вида. Можно напасть на наго или попытпться обойти.')
         enemy_hp = 115
         enemy_dmg = 100
+        print(f"\nВаша характеристика:\nHP:{pl_hp} Dammage:{pl_dmg} Lvl.{pl_lvl}")
         challenge_4 = int(input('\nИнформация:Сила врага: 100, здоровье: 115. При победе +2 lvl\nВаши действия:\n1 Напасть\n2 Попытаться обойти\nВвод:'))
         if challenge_4 == 1:
             print('Как только Вы подошли ближе, то этот кабан сразу на Вас напал, оказалось, что он был из матёрых')
@@ -70,7 +71,7 @@ if start == 1:
             if challenge_5 == 2:
                 enemy_dmg = 90
                 enemy_hp = 72
-                pl_hp -= emnemy_dmg
+                pl_hp -= enemy_dmg
                 pl_lvl += 3
                 pl_dmg += 30
                 print ('\nВы победили !')
@@ -105,62 +106,35 @@ if start == 1:
             b_result = team_hp - boss_dmg
             if final == 2:
                 print('\nГоблина ответ! В АТАКУ!')
-                print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
-                print('\nВаш ход!')
-                print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                b_result -= boss_dmg
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                b_result -= boss_dmg
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
             else:
                 print('Воистину за печеньки !')
-                print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
-                print('\nВаш ход!')
-                print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                b_result -= boss_dmg
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                b_result -= boss_dmg
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
+            print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
+            print('\nВаш ход!')
+            print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
+            print(y_result)
+            print('Ход дракона!')
+            print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
+            print(b_result)
+            print('\nВаш ход!')
+            print('\n' + str(y_result) + ' - ' + str(team_dmg))
+            y_result -= team_dmg
+            print(y_result)
+            print('Ход дракона!')
+            print('\n' + str(b_result) + ' - ' + str(boss_dmg))
+            b_result -= boss_dmg
+            print(b_result)
+            print('\nВаш ход!')
+            print('\n' + str(y_result) + ' - ' + str(team_dmg))
+            y_result -= team_dmg
+            print(y_result)
+            print('Ход дракона!')
+            print('\n' + str(b_result) + ' - ' + str(boss_dmg))
+            b_result -= boss_dmg
+            print(b_result)
+            print('\nВаш ход!')
+            print('\n' + str(y_result) + ' - ' + str(team_dmg))
+            y_result -= team_dmg
+            print(y_result)
         else:
             print('Очень жаль.... Чтож, тогда прийдётся ждать моих согильдийцев, а вам могу пожелать лишь удачи')# без напарника
             pl_hp = 100
@@ -174,66 +148,40 @@ if start == 1:
             b_result = team_hp - boss_dmg
             if final == 2:
                 print('\nГоблина ответ! В АТАКУ!')
-                print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
-                print('\nВаш ход!')
-                print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                b_result -= boss_dmg
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                b_result -= boss_dmg
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
             else:
                 print('Воистину за печеньки !')
-                print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
-                print('\nВаш ход!')
-                print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                b_result -= boss_dmg
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                b_result -= boss_dmg
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)    
+            print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
+            print('\nВаш ход!')
+            print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
+            print(y_result)
+            print('Ход дракона!')
+            print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
+            print(b_result)
+            print('\nВаш ход!')
+            print('\n' + str(y_result) + ' - ' + str(team_dmg))
+            y_result -= team_dmg
+            print(y_result)
+            print('Ход дракона!')
+            print('\n' + str(b_result) + ' - ' + str(boss_dmg))
+            b_result -= boss_dmg
+            print(b_result)
+            print('\nВаш ход!')
+            print('\n' + str(y_result) + ' - ' + str(team_dmg))
+            y_result -= team_dmg
+            print(y_result)
+            print('Ход дракона!')
+            print('\n' + str(b_result) + ' - ' + str(boss_dmg))
+            b_result -= boss_dmg
+            print(b_result)
+            print('\nВаш ход!')
+            print('\n' + str(y_result) + ' - ' + str(team_dmg))
+            y_result -= team_dmg
+            print(y_result)
     elif challenge_3 == 2 and choise_1 ==0:# ничего нового 
         print('\nДождавшись пока атака орков-великанов будет отбита Вы решили всё таки зайти в эту деревню. Самое главное сейчас было найти место для отдыха. Распросивши у местных жителей Вы узнали, что можете переночивать в конюшне, но только одну ночь. Выспавшись и востановивши силы Вы вновь подались в путь')
         pl_hp = 100
-        print('\nПройдя несколько километров Вы наткнулись на кабана. Но Вам что-то в нём не понравилось, он выглядел более опасным чем другие представители его вида. Можно напасть на наго или попытпться обойти.')
+        print('\nПройдя несколько километров Вы наткнулись на кабана. Но Вам что-то в нём не понравилось, он выглядел более опасным чем другие представители его вида. Можно напасть на него или попытаться обойти.')
+        print(f"\nВаша характеристика:\nHP:{pl_hp} Dammage:{pl_dmg} Lvl.{pl_lvl}")
         enemy_hp = 115
         enemy_dmg = 100
         challenge_4 = int(input('\nИнформация:Сила врага: 100, здоровье: 115. При победе +2 lvl\nВаши действия:\n1 Напасть\n2 Попытаться обойти\nВвод:'))
@@ -249,7 +197,7 @@ if start == 1:
             print('Решив его обойти, Вы начали делать небольшой крюк, но он всё равно Вас почуял и напал. Рванув со всех ног Вы всё-таки смогли от него убежать, но и он Вас потрепал.')
             pl_hp -= 20
             print(f"\nВаша характеристика:\nHp:{pl_hp} Dammage:{pl_dmg} Lvl.{pl_lvl}")
-        print('\nИзбавившись от кабана вы продолжили свой путь. Дальше ваш путь лежал через местность где справа от вас находились возвышености и скалы, а с левой стороны лес, где по слухам могли обитать матёрые волки. Идя по тропе, вы встретили по пути пастушку, которая переводила своё стадо овец. Это было очень рекдое событие, когда пасти овец доверяли девушкам, к тому-же в таких далёких и опасных от церкви местах.\nПастушка: Приветствую тебя странник! Меня зовут Нора Арендт, а это мой друг и помощник - пёс Энек. Есл твой путь лежит через эту местность, то рекомендую как можно скорее её покинуть и направиться к ближайшему городу под названием Рубинхайгем. В этом лесу всё чаще происходят нападения волков на караваны и людей. Если Вы хотите, то я могу составить Вам компанию и защитить от волков, ведь как всем известно: пастухи и волки - заклятые враги. Но по приходу в город я Вас попрошу купить мне что-нибудь поесть')
+        print('\nИзбавившись от кабана вы продолжили свой путь. Дальше ваш путь лежал через местность где справа от вас находились возвышености и скалы, а с левой стороны лес, где по слухам могли обитать матёрые волки. Идя по тропе, вы встретили по пути пастушку, которая переводила своё стадо овец. Это было очень рекдое событие, когда пасти овец доверяли девушкам, к тому-же в таких далёких и опасных от церкви местах.\nПастушка: Приветствую тебя странник! Меня зовут Нора Арендт, а это мой друг и помощник - пёс Энек. Если твой путь лежит через эту местность, то рекомендую как можно скорее её покинуть и направиться к ближайшему городу под названием Рубинхайгем. В этом лесу всё чаще происходят нападения волков на караваны и людей. Если Вы хотите, то я могу составить Вам компанию и защитить от волков, ведь как всем известно: пастухи и волки - заклятые враги. Но по приходу в город я Вас попрошу купить мне что-нибудь поесть')
         nora = int(input('\nНу как, возьмёшь меня с собой?\nИнформация: При встрече с волками Нора может помочь Вам избежать нападения, но при этом Вы ничего не получите в награду.\n1 И сам справлюсь\n2 Пойти с пастушкой\nВвод:'))
         if nora == 2:
             print('Отлично, тогда идёмьте скорее!')
@@ -262,7 +210,7 @@ if start == 1:
             if challenge_5 == 2:
                 enemy_dmg = 90
                 enemy_hp = 72
-                pl_hp -= emnemy_dmg
+                pl_hp -= enemy_dmg
                 pl_lvl += 3
                 pl_dmg += 30
                 print ('\nВы победили !')
@@ -277,7 +225,7 @@ if start == 1:
                 print ('\nВы победили !')
                 print(f"\nВаша характеристика:\nHp:{pl_hp} Dammage:{pl_dmg} Lvl.{pl_lvl}")
                 print('После жестокой битвы Вы всё таки добрались до города')
-        print('\nПервым делом Вам стоит пойти в постоялый двор, для аренды комнаты на ночь. Идя по улице Вы заметли, что идёт набор в добровольци на убийство дракона. Такого обьявление нельзя было игнорировать и Вы сразу направились на общий сбор который вот-вот должен был начаться. Прийдя на него вы удивились, что людей оказалось слишком мало, точнее только один человек. Как только он вас увидел, сразу направился в вашу сторону.\nНезнакомец:Приветствую! Я Урцуг Шварц или же меня прозвали "Щитоносцем". Слава господу, что кто-то откликнулся на моё обьявление, обычно в это время люди готовятся к ярмарке, которая будет через 5 дней. Позволь мне оправится к дракону вместе с тобой. Я хочу лишь отомстить этому дракону за то, что спалил мою деревню до тла.')
+        print('\nПервым делом Вам стоит пойти в постоялый двор, для аренды комнаты на ночь. Идя по улице Вы заметли, что идёт набор в добровольци на убийство дракона. Такого обьявление нельзя было игнорировать и Вы сразу направились на общий сбор который вот-вот должен был начаться. Прийдя на него вы удивились, что людей оказалось слишком мало, точнее только один человек. Как только он вас увидел, сразу направился в вашу сторону.\nНезнакомец:Приветствую! Я Урцуг Шварц или же меня прозвали "Щитоносцем". Слава господу, что кто-то откликнулся на моё обьявление, обычно в это время люди готовятся к ярмарке, которая будет через 5 дней. Позволь мне отправиться к дракону вместе с тобой. Я хочу лишь отомстить этому дракону за то, что спалил мою деревню до тла.')
         choise_2 = int(input('\nИнформация о напарнике: \nВаши действия:\n1 Взять с собой\n2 И сам справлюсь\nВвод:'))
         if choise_2 == 1: # С напарником
             print('\nЩитоносец: Огромное Вам спасибо! Если вы не успели снять комнату в постоялом дворе, то могу пригласить в покои моей гильдии, всё равно до завтрашнего дня там никого не будет')
@@ -296,62 +244,35 @@ if start == 1:
             b_result = team_hp - boss_dmg
             if final == 2:
                 print('\nГоблина ответ! В АТАКУ!')
-                print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
-                print('\nВаш ход!')
-                print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                b_result -= boss_dmg
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                b_result -= boss_dmg
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
             else:
                 print('Воистину за печеньки !')
-                print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
-                print('\nВаш ход!')
-                print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                b_result -= boss_dmg
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                b_result -= boss_dmg
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
+            print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
+            print('\nВаш ход!')
+            print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
+            print(y_result)
+            print('Ход дракона!')
+            print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
+            print(b_result)
+            print('\nВаш ход!')
+            print('\n' + str(y_result) + ' - ' + str(team_dmg))
+            y_result -= team_dmg
+            print(y_result)
+            print('Ход дракона!')
+            print('\n' + str(b_result) + ' - ' + str(boss_dmg))
+            b_result -= boss_dmg
+            print(b_result)
+            print('\nВаш ход!')
+            print('\n' + str(y_result) + ' - ' + str(team_dmg))
+            y_result -= team_dmg
+            print(y_result)
+            print('Ход дракона!')
+            print('\n' + str(b_result) + ' - ' + str(boss_dmg))
+            b_result -= boss_dmg
+            print(b_result)
+            print('\nВаш ход!')
+            print('\n' + str(y_result) + ' - ' + str(team_dmg))
+            y_result -= team_dmg
+            print(y_result)
         else:
             print('Очень жаль.... Чтож, тогда прийдётся ждать моих согильдийцев, а вам могу пожелать лишь удачи')# без напарника
             pl_hp = 100
@@ -365,62 +286,35 @@ if start == 1:
             b_result = team_hp - boss_dmg
             if final == 2:
                 print('\nГоблина ответ! В АТАКУ!')
-                print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
-                print('\nВаш ход!')
-                print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                b_result -= boss_dmg
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                b_result -= boss_dmg
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
             else:
                 print('Воистину за печеньки !')
-                print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
-                print('\nВаш ход!')
-                print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                b_result -= boss_dmg
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                b_result -= boss_dmg
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
+            print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
+            print('\nВаш ход!')
+            print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
+            print(y_result)
+            print('Ход дракона!')
+            print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
+            print(b_result)
+            print('\nВаш ход!')
+            print('\n' + str(y_result) + ' - ' + str(team_dmg))
+            y_result -= team_dmg
+            print(y_result)
+            print('Ход дракона!')
+            print('\n' + str(b_result) + ' - ' + str(boss_dmg))
+            b_result -= boss_dmg
+            print(b_result)
+            print('\nВаш ход!')
+            print('\n' + str(y_result) + ' - ' + str(team_dmg))
+            y_result -= team_dmg
+            print(y_result)
+            print('Ход дракона!')
+            print('\n' + str(b_result) + ' - ' + str(boss_dmg))
+            b_result -= boss_dmg
+            print(b_result)
+            print('\nВаш ход!')
+            print('\n' + str(y_result) + ' - ' + str(team_dmg))
+            y_result -= team_dmg
+            print(y_result)
     elif challenge_3 == 1 and pl_lvl >=2:
         print('\nВы на всех порах побежали на помощь и крича на орков разные обидные слова "Хорошо, что поблизости небыло детей", тем самым переманив внимание обидчеков на себя. Этим моментом воспользывались защитники деревни, окруживши они заманили их в ловушку. Ну а Вы разогнавшись прыгнули со скалы...Кхм. То есть споткнувшись упали между двумя великанами. К счастью для Вас, жители уже были готовы для финального удара, все всместе убили их. И тут, облегчённо взохнувши Вы не заметили как одна из тушек падает прямо на Вас')
         pl_lvl += 1
@@ -464,7 +358,7 @@ if start == 1:
             if challenge_5 == 2:
                 enemy_dmg = 90
                 enemy_hp = 72
-                pl_hp -= emnemy_dmg
+                pl_hp -= enemy_dmg
                 pl_lvl += 3
                 pl_dmg += 30
                 print ('\nВы победили !')
@@ -498,62 +392,35 @@ if start == 1:
             b_result = team_hp - boss_dmg
             if final == 2:
                 print('\nГоблина ответ! В АТАКУ!')
-                print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
-                print('\nВаш ход!')
-                print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                b_result -= boss_dmg
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                b_result -= boss_dmg
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
             else:
                 print('Воистину за печеньки !')
-                print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
-                print('\nВаш ход!')
-                print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                b_result -= boss_dmg
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                b_result -= boss_dmg
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
+            print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
+            print('\nВаш ход!')
+            print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
+            print(y_result)
+            print('Ход дракона!')
+            print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
+            print(b_result)
+            print('\nВаш ход!')
+            print('\n' + str(y_result) + ' - ' + str(team_dmg))
+            y_result -= team_dmg
+            print(y_result)
+            print('Ход дракона!')
+            print('\n' + str(b_result) + ' - ' + str(boss_dmg))
+            b_result -= boss_dmg
+            print(b_result)
+            print('\nВаш ход!')
+            print('\n' + str(y_result) + ' - ' + str(team_dmg))
+            y_result -= team_dmg
+            print(y_result)
+            print('Ход дракона!')
+            print('\n' + str(b_result) + ' - ' + str(boss_dmg))
+            b_result -= boss_dmg
+            print(b_result)
+            print('\nВаш ход!')
+            print('\n' + str(y_result) + ' - ' + str(team_dmg))
+            y_result -= team_dmg
+            print(y_result)
         else:
             print('Очень жаль.... Чтож, тогда прийдётся ждать моих согильдийцев, а вам могу пожелать лишь удачи')# без напарника
             pl_hp = 100
@@ -567,62 +434,35 @@ if start == 1:
             b_result = team_hp - boss_dmg
             if final == 2:
                 print('\nГоблина ответ! В АТАКУ!')
-                print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
-                print('\nВаш ход!')
-                print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                b_result -= boss_dmg
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                b_result -= boss_dmg
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
             else:
                 print('Воистину за печеньки !')
-                print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
-                print('\nВаш ход!')
-                print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                b_result -= boss_dmg
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)
-                print('Ход дракона!')
-                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                b_result -= boss_dmg
-                print(b_result)
-                print('\nВаш ход!')
-                print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                y_result -= team_dmg
-                print(y_result)       
+            print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
+            print('\nВаш ход!')
+            print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
+            print(y_result)
+            print('Ход дракона!')
+            print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
+            print(b_result)
+            print('\nВаш ход!')
+            print('\n' + str(y_result) + ' - ' + str(team_dmg))
+            y_result -= team_dmg
+            print(y_result)
+            print('Ход дракона!')
+            print('\n' + str(b_result) + ' - ' + str(boss_dmg))
+            b_result -= boss_dmg
+            print(b_result)
+            print('\nВаш ход!')
+            print('\n' + str(y_result) + ' - ' + str(team_dmg))
+            y_result -= team_dmg
+            print(y_result)
+            print('Ход дракона!')
+            print('\n' + str(b_result) + ' - ' + str(boss_dmg))
+            b_result -= boss_dmg
+            print(b_result)
+            print('\nВаш ход!')
+            print('\n' + str(y_result) + ' - ' + str(team_dmg))
+            y_result -= team_dmg
+            print(y_result)
     elif choise_1 == 2: # похождение с напарником  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------      
         print('\nХоршо, я познакомлю Вас, но чуть позже, а сейчас отдыхай')
         print('\nЧерез два дня этот мужчина снова пришёл к Вам, но с ним был кто-то ещё.\nРэйнхард: Знакомся, это твой напарник\nНапарник:Приветствую, меня прозвали "Тенью", в благодарность за Вашу помощь нашей деревни я вызвалась помочь Вам в ваших похождениях')
@@ -679,7 +519,7 @@ if start == 1:
                 friend_2_hp = 500
                 friend_2_dmg = 60
                 friend_2_lvl = 9
-                print(f"\nХарактеристика Щитоносца:\nHp:{friend_2_hp} Dammage:{friend_2_dmg} Lvl.{frien_2_lvl}")
+                print(f"\nХарактеристика Щитоносца:\nHp:{friend_2_hp} Dammage:{friend_2_dmg} Lvl.{friend_2_lvl}")
                 pl_hp = 100
                 friend_1_hp = 100
                 print('Переночивавши в покоях, Вы и ваша команда снарядились на "Финальный рывок". Выйдя из города вам предстояло поднятся на гору, где обитал этот дракон. Пройдя несколько километров, вы наконец добрались до этой горы, осталось лишь взабратся на самую вершину. Работая в команде вы наконец добрались до нужного вам места и увидели его - Огромного и страшного дракона, а также небольшую щель откуда доносились чьи-то крики. Недолго думая Вы вступили в бой с драконом.')
@@ -692,62 +532,35 @@ if start == 1:
                 b_result = team_hp - boss_dmg
                 if final == 2:
                     print('\nГоблина ответ! В АТАКУ!')
-                    print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
-                    print('\nВаш ход!')
-                    print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
-                    print(y_result)
-                    print('Ход дракона!')
-                    print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
-                    print(b_result)
-                    print('\nВаш ход!')
-                    print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                    y_result -= team_dmg
-                    print(y_result)
-                    print('Ход дракона!')
-                    print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                    b_result -= boss_dmg
-                    print(b_result)
-                    print('\nВаш ход!')
-                    print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                    y_result -= team_dmg
-                    print(y_result)
-                    print('Ход дракона!')
-                    print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                    b_result -= boss_dmg
-                    print(b_result)
-                    print('\nВаш ход!')
-                    print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                    y_result -= team_dmg
-                    print(y_result)
                 else:
                     print('Воистину за печеньки !')
-                    print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
-                    print('\nВаш ход!')
-                    print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
-                    print(y_result)
-                    print('Ход дракона!')
-                    print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
-                    print(b_result)
-                    print('\nВаш ход!')
-                    print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                    y_result -= team_dmg
-                    print(y_result)
-                    print('Ход дракона!')
-                    print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                    b_result -= boss_dmg
-                    print(b_result)
-                    print('\nВаш ход!')
-                    print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                    y_result -= team_dmg
-                    print(y_result)
-                    print('Ход дракона!')
-                    print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                    b_result -= boss_dmg
-                    print(b_result)
-                    print('\nВаш ход!')
-                    print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                    y_result -= team_dmg
-                    print(y_result)
+                print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
+                print('\nВаш ход!')
+                print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
+                print(y_result)
+                print('Ход дракона!')
+                print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
+                print(b_result)
+                print('\nВаш ход!')
+                print('\n' + str(y_result) + ' - ' + str(team_dmg))
+                y_result -= team_dmg
+                print(y_result)
+                print('Ход дракона!')
+                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
+                b_result -= boss_dmg
+                print(b_result)
+                print('\nВаш ход!')
+                print('\n' + str(y_result) + ' - ' + str(team_dmg))
+                y_result -= team_dmg
+                print(y_result)
+                print('Ход дракона!')
+                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
+                b_result -= boss_dmg
+                print(b_result)
+                print('\nВаш ход!')
+                print('\n' + str(y_result) + ' - ' + str(team_dmg))
+                y_result -= team_dmg
+                print(y_result)
             else:
                 print('Очень жаль.... Чтож, тогда прийдётся ждать моих согильдийцев, а вам могу пожелать лишь удачи')# Малая кровь без напарника
                 pl_hp = 100
@@ -762,62 +575,35 @@ if start == 1:
                 b_result = team_hp - boss_dmg
                 if final == 2:
                     print('\nГоблина ответ! В АТАКУ!')
-                    print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
-                    print('\nВаш ход!')
-                    print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
-                    print(y_result)
-                    print('Ход дракона!')
-                    print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
-                    print(b_result)
-                    print('\nВаш ход!')
-                    print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                    y_result -= team_dmg
-                    print(y_result)
-                    print('Ход дракона!')
-                    print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                    b_result -= boss_dmg
-                    print(b_result)
-                    print('\nВаш ход!')
-                    print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                    y_result -= team_dmg
-                    print(y_result)
-                    print('Ход дракона!')
-                    print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                    b_result -= boss_dmg
-                    print(b_result)
-                    print('\nВаш ход!')
-                    print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                    y_result -= team_dmg
-                    print(y_result)
                 else:
                     print('Воистину за печеньки !')
-                    print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
-                    print('\nВаш ход!')
-                    print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
-                    print(y_result)
-                    print('Ход дракона!')
-                    print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
-                    print(b_result)
-                    print('\nВаш ход!')
-                    print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                    y_result -= team_dmg
-                    print(y_result)
-                    print('Ход дракона!')
-                    print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                    b_result -= boss_dmg
-                    print(b_result)
-                    print('\nВаш ход!')
-                    print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                    y_result -= team_dmg
-                    print(y_result)
-                    print('Ход дракона!')
-                    print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                    b_result -= boss_dmg
-                    print(b_result)
-                    print('\nВаш ход!')
-                    print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                    y_result -= team_dmg
-                    print(y_result)
+                print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
+                print('\nВаш ход!')
+                print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
+                print(y_result)
+                print('Ход дракона!')
+                print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
+                print(b_result)
+                print('\nВаш ход!')
+                print('\n' + str(y_result) + ' - ' + str(team_dmg))
+                y_result -= team_dmg
+                print(y_result)
+                print('Ход дракона!')
+                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
+                b_result -= boss_dmg
+                print(b_result)
+                print('\nВаш ход!')
+                print('\n' + str(y_result) + ' - ' + str(team_dmg))
+                y_result -= team_dmg
+                print(y_result)
+                print('Ход дракона!')
+                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
+                b_result -= boss_dmg
+                print(b_result)
+                print('\nВаш ход!')
+                print('\n' + str(y_result) + ' - ' + str(team_dmg))
+                y_result -= team_dmg
+                print(y_result)
         else:
             pl_hp -= (enemy_dmg //2)
             pl_lvl += 4
@@ -848,62 +634,35 @@ if start == 1:
                 b_result = team_hp - boss_dmg
                 if final == 2:
                     print('\nГоблина ответ! В АТАКУ!')
-                    print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
-                    print('\nВаш ход!')
-                    print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
-                    print(y_result)
-                    print('Ход дракона!')
-                    print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
-                    print(b_result)
-                    print('\nВаш ход!')
-                    print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                    y_result -= team_dmg
-                    print(y_result)
-                    print('Ход дракона!')
-                    print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                    b_result -= boss_dmg
-                    print(b_result)
-                    print('\nВаш ход!')
-                    print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                    y_result -= team_dmg
-                    print(y_result)
-                    print('Ход дракона!')
-                    print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                    b_result -= boss_dmg
-                    print(b_result)
-                    print('\nВаш ход!')
-                    print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                    y_result -= team_dmg
-                    print(y_result)
                 else:
                     print('Воистину за печеньки !')
-                    print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
-                    print('\nВаш ход!')
-                    print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
-                    print(y_result)
-                    print('Ход дракона!')
-                    print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
-                    print(b_result)
-                    print('\nВаш ход!')
-                    print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                    y_result -= team_dmg
-                    print(y_result)
-                    print('Ход дракона!')
-                    print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                    b_result -= boss_dmg
-                    print(b_result)
-                    print('\nВаш ход!')
-                    print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                    y_result -= team_dmg
-                    print(y_result)
-                    print('Ход дракона!')
-                    print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                    b_result -= boss_dmg
-                    print(b_result)
-                    print('\nВаш ход!')
-                    print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                    y_result -= team_dmg
-                    print(y_result)
+                print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
+                print('\nВаш ход!')
+                print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
+                print(y_result)
+                print('Ход дракона!')
+                print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
+                print(b_result)
+                print('\nВаш ход!')
+                print('\n' + str(y_result) + ' - ' + str(team_dmg))
+                y_result -= team_dmg
+                print(y_result)
+                print('Ход дракона!')
+                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
+                b_result -= boss_dmg
+                print(b_result)
+                print('\nВаш ход!')
+                print('\n' + str(y_result) + ' - ' + str(team_dmg))
+                y_result -= team_dmg
+                print(y_result)
+                print('Ход дракона!')
+                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
+                b_result -= boss_dmg
+                print(b_result)
+                print('\nВаш ход!')
+                print('\n' + str(y_result) + ' - ' + str(team_dmg))
+                y_result -= team_dmg
+                print(y_result)
             else:
                 print('Очень жаль.... Чтож, тогда прийдётся ждать моих согильдийцев, а вам могу пожелать лишь удачи')
                 pl_hp = 100
@@ -918,61 +677,34 @@ if start == 1:
                 b_result = team_hp - boss_dmg
                 if final == 2: # Всех перебить без напарника
                     print('\nГоблина ответ! В АТАКУ!')
-                    print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
-                    print('\nВаш ход!')
-                    print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
-                    print(y_result)
-                    print('Ход дракона!')
-                    print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
-                    print(b_result)
-                    print('\nВаш ход!')
-                    print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                    y_result -= team_dmg
-                    print(y_result)
-                    print('Ход дракона!')
-                    print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                    b_result -= boss_dmg
-                    print(b_result)
-                    print('\nВаш ход!')
-                    print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                    y_result -= team_dmg
-                    print(y_result)
-                    print('Ход дракона!')
-                    print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                    b_result -= boss_dmg
-                    print(b_result)
-                    print('\nВаш ход!')
-                    print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                    y_result -= team_dmg
-                    print(y_result)
                 else:
                     print('Воистину за печеньки !')
-                    print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
-                    print('\nВаш ход!')
-                    print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
-                    print(y_result)
-                    print('Ход дракона!')
-                    print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
-                    print(b_result)
-                    print('\nВаш ход!')
-                    print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                    y_result -= team_dmg
-                    print(y_result)
-                    print('Ход дракона!')
-                    print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                    b_result -= boss_dmg
-                    print(b_result)
-                    print('\nВаш ход!')
-                    print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                    y_result -= team_dmg
-                    print(y_result)
-                    print('Ход дракона!')
-                    print('\n' + str(b_result) + ' - ' + str(boss_dmg))
-                    b_result -= boss_dmg
-                    print(b_result)
-                    print('\nВаш ход!')
-                    print('\n' + str(y_result) + ' - ' + str(team_dmg))
-                    y_result -= team_dmg
-                    print(y_result)      
+                print('\nFinal fight\nХарактеристика дракона: HP: 1000 Dammage: 100 Level: ???')
+                print('\nВаш ход!')
+                print('\n' + str(boss_hp) + ' - ' + str(team_dmg))
+                print(y_result)
+                print('Ход дракона!')
+                print('\n' + str(team_hp) + ' - ' + str(boss_dmg))
+                print(b_result)
+                print('\nВаш ход!')
+                print('\n' + str(y_result) + ' - ' + str(team_dmg))
+                y_result -= team_dmg
+                print(y_result)
+                print('Ход дракона!')
+                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
+                b_result -= boss_dmg
+                print(b_result)
+                print('\nВаш ход!')
+                print('\n' + str(y_result) + ' - ' + str(team_dmg))
+                y_result -= team_dmg
+                print(y_result)
+                print('Ход дракона!')
+                print('\n' + str(b_result) + ' - ' + str(boss_dmg))
+                b_result -= boss_dmg
+                print(b_result)
+                print('\nВаш ход!')
+                print('\n' + str(y_result) + ' - ' + str(team_dmg))
+                y_result -= team_dmg
+                print(y_result)
 else:
     print('Baka')
