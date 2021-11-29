@@ -69,7 +69,7 @@ arr = []
 for elem in range(randint(3,10)):
     arr.append(randint(1,5)) # append добавляет в конец списка элемент
 
-arr.sort() # сортирует значения в порядке возрастания
+arr.sort() # сортирует значения в порядке возрастания (sort)
 
 for ones in arr:
     if ones == 1:
@@ -78,7 +78,7 @@ for ones in arr:
        
 print(arr)
 
-arr.pop(2)
+arr.pop(2) # удаляет элемент по индексу (pop)
 print(arr)
 
 
