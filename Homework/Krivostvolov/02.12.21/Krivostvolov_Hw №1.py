@@ -1,8 +1,7 @@
-list = []
-num = 0
+massive = []
 for num in range (0, 100):
     if num % 2 == 1:
-        list.append(num)
+        massive.append(num)
     else:
         print('')
-print(list)
+print(massive)
