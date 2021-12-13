@@ -1,5 +1,5 @@
 '''
-Homework 6.12.21s
+Homework 6.12.21
 # Task 1 - Even numbers
 list_num = []
 
