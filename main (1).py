@@ -5,7 +5,7 @@
 Write your code in this editor and press "Run" button to execute it.
 
 '''
-
+#2-е задание
 a = (1,2,3,4,5,5,4,4,2,2)
 a.index
 a.count(5)
